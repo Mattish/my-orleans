@@ -1,0 +1,1 @@
+powershell .\restore.ps1 && powershell .\build.ps1
