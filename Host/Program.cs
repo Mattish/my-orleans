@@ -7,7 +7,6 @@ class Program
     {
         var config = ClusterConfiguration.LocalhostPrimarySilo();
         config.LoadFromFile("OrleansConfiguration.xml");
-        config.AddMemoryStorageProvider();
         var siloHost = new Orleans.Runtime.Host.SiloHost("MyHost", config);
         siloHost.LoadOrleansConfig();
         siloHost.InitializeOrleansSilo();

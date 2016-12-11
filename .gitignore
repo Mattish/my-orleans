@@ -2,3 +2,6 @@ bin
 obj
 *.log
 .vscode
+
+*.ps1
+*.bat
