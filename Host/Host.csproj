@@ -3,14 +3,18 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp1.0</TargetFramework>
   </PropertyGroup>
-
   <ItemGroup>
     <Compile Include="**\*.cs" />
     <EmbeddedResource Include="**\*.resx" />
   </ItemGroup>
-  
+  <ItemGroup>
+    <Content Include="OrleansConfiguration.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.App" Version="1.0.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="9.0.2-beta*" />
     <PackageReference Include="Microsoft.NET.Sdk">
       <Version>1.0.0-alpha-20161104-2</Version>
       <PrivateAssets>All</PrivateAssets>
@@ -20,9 +24,8 @@
     <PackageReference Include="Microsoft.Orleans.OrleansProviders" Version="2.0.0-preview*" />
     <PackageReference Include="Microsoft.Orleans.OrleansRuntime" Version="2.0.0-preview*" />
   </ItemGroup>
-
   <ItemGroup>
-    <ProjectReference Include="..\shared\shared.csproj" />
+    <ProjectReference Include="..\Shared\shared.csproj" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

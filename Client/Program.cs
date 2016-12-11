@@ -17,3 +17,11 @@ class Program
         grain.AddGreeting("SomeGreeting").Wait();
     }
 }
+
+public class MyNancyModule : Nancy.NancyModule{
+
+    public MyNancyModule()
+    {
+        Get["/"] => _ => "Hello World";
+    }
+}
