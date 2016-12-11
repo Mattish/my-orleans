@@ -3,7 +3,8 @@
   <Globals>
     <StorageProviders>
       <!--<Provider Type="Orleans.Storage.MemoryStorage" Name="MemoryStore" />-->
-      <Provider Type="Shared.MyStorageProvider" Name="MyStorageProvider" />
+      <!--<Provider Type="Shared.MyStorageProvider" Name="MyStorageProvider" />-->
+      <Provider Type="Shared.RedisStorageProvider" Name="RedisStorageProvider" />
     </StorageProviders>
     <SeedNode Address="localhost" Port="11111" />
   </Globals>

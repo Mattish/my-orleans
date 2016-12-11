@@ -1,5 +1,4 @@
 using System;
-using System.Threading.Tasks;
 using Orleans;
 using Orleans.Runtime.Configuration;
 using Shared;
@@ -13,5 +12,8 @@ class Program
         GrainClient.Initialize(config);
         DateTime lastTime = DateTime.Now;
         var counter = 0;
+
+        var grain = GrainClient.GrainFactory.GetGrain<IMyGrainStateful>(0);
+        grain.AddGreeting("SomeGreeting").Wait();
     }
 }

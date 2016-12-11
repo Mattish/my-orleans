@@ -14,7 +14,7 @@ namespace Shared{
     }
 
 
-    [StorageProvider(ProviderName = "MyStorageProvider")]
+    [StorageProvider(ProviderName = "RedisStorageProvider")]
     public class MyGrainStateful : Orleans.Grain<GrainState>, IMyGrainStateful
     {
         public Task AddGreeting(string greeting)
