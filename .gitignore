@@ -3,5 +3,4 @@ obj
 *.log
 .vscode
 
-*.ps1
-*.bat
+*.rsa
