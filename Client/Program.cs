@@ -24,7 +24,7 @@ class Program
                     options.NoDelay = true;
                     options.UseConnectionLogging();
                 })
-                .UseUrls("http://localhost:5000","http://dong.mattish.co.uk:5001","http://+:5002")
+                .UseUrls("http://localhost:5000","http://+:5002")
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseStartup<Startup>()
                 .Build();
